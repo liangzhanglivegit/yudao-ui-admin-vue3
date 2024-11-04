@@ -158,6 +158,7 @@
 
   <!-- 表单弹窗：添加/修改 -->
   <OutputForm ref="formRef" @success="getList" />
+  <ExcelImportForm ref="importFormRef" @success="getList" />
 </template>
 
 <script setup lang="ts">
@@ -165,6 +166,7 @@ import { dateFormatter } from '@/utils/formatTime'
 import download from '@/utils/download'
 import { OutputApi, OutputVO } from '@/api/industrymap/output'
 import OutputForm from './OutputForm.vue'
+import ExcelImportForm from './ExcelImportForm.vue'
 
 /** 产量分布 列表 */
 defineOptions({ name: 'Output' })
